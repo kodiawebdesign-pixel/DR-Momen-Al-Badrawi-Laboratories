@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معامل مؤمن البدراوي للتحاليل الطبية - دقة وسرعة وثقة</title>
+    <!-- وصف الموقع لمحركات البحث -->
+    <meta name="description" content="معامل مؤمن البدراوي للتحاليل الطبية في الإسكندرية (العصافرة قبلي - السيوف شماعة). أكثر من 150 نوع تحليل بنتائج دقيقة وسريعة مع إمكانية الزيارة المنزلية.">
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- مكتبة AOS للأنيميشن عند التمرير -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* ===== المتغيرات الأساسية والألوان المحسنة ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* الألوان الأساسية المحسنة */
+            --primary: #0B7285;
+            --primary-dark: #085e6f;
+            --primary-light: #22B8CF;
+            --primary-soft: #e3f2f5;
+            --secondary: #0B1F3B;
+            --secondary-light: #1a3352;
+            --accent: #FFB74D;
+            --soft-blue: #E7F5FF;
+            --background: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --text-light: #94a3b8;
+            --border-color: #E2E8F0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --radius: 20px;
+            --radius-sm: 12px;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow: 0 10px 30px -10px rgba(11, 114, 133, 0.15);
+            --shadow-lg: 0 20px 40px -15px rgba(11, 114, 133, 0.25);
+            --shadow-hover: 0 25px 50px -12px rgba(11, 114, 133, 0.35);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            --gradient-soft: linear-gradient(135deg, var(--soft-blue) 0%, #ffffff 100%);
+        }
+
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* تنسيقات عامة محسنة */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            right: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 4px;
+        }
+
+        h2.section-title-center:after {
+            right: 50%;
+            transform: translateX(50%);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* الأزرار المحسنة */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Cairo', sans-serif;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover:before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 8px 20px rgba(11, 114, 133, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(11, 114, 133, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background-color: var(--primary-soft);
+            transform: translateY(-4px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background-color: white;
+        }
+
+        /* بطاقات محسنة */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 30px 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        .card:hover:before {
+            opacity: 1;
+        }
+
+        /* شارات الجودة */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: var(--primary-soft);
+            color: var(--primary);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* ===== الهيدر المحسن ===== */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+            padding: 15px 0;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+        }
+        .logo span {
+            background: var(--secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-menu a {
+            font-weight: 600;
+            position: relative;
+            padding: 8px 0;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+        .nav-menu a:hover:after {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+        .header-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        .header-buttons .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        /* ===== شريط الثقة المحسن ===== */
+        .trust-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+        .trust-item {
+            background: var(--card-bg);
+            padding: 30px 20px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+        }
+        .trust-item i {
+            font-size: 42px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        /* ===== قائمة التحاليل الكاملة ===== */
+        .tests-section {
+            background: var(--gradient-soft);
+        }
+        .tests-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        .category-tab {
+            padding: 12px 25px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-sm);
+        }
+        .category-tab:hover,
+        .category-tab.active {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        .tests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .test-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .test-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+            transform: translateX(-5px);
+        }
+        .test-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-soft);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 24px;
+        }
+        .test-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .test-info p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* ===== إحصائيات ===== */
+        .stats-section {
+            background: var(--gradient-primary);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .stats-section:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: rgba(255,255,255,0.05);
+            transform: rotate(35deg);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .stat-item {
+            padding: 20px;
+        }
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* ===== كروت الفروع المحسنة ===== */
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+        }
+        .branch-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+        .branch-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        .branch-img {
+            height: 220px;
+            background: var(--gradient-primary);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+        }
+        .branch-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+        .branch-info {
+            padding: 30px;
+        }
+        .branch-info h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .branch-details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .branch-details p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+        }
+
+        /* ===== قسم الفريق الطبي ===== */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .team-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .team-avatar {
+            width: 150px;
+            height: 150px;
+            background: var(--gradient-soft);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: var(--primary);
+            border: 4px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        /* ===== شريط العملاء (شركات التأمين) ===== */
+        .clients-bar {
+            background: white;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .clients-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            opacity: 0.7;
+        }
+        .client-item {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .client-item i {
+            font-size: 30px;
+            color: var(--primary);
+        }
+
+        /* ===== نموذج محسن ===== */
+        .home-visit-form {
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 18px 25px;
+            border: 2px solid var(--border-color);
+            border-radius: 14px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 16px;
+            transition: all 0.3s;
+            background: #fafafa;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(11, 114, 133, 0.1);
+        }
+
+        /* ===== الفوتر المحسن ===== */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 80px 0 30px;
+            position: relative;
+        }
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        .footer-col h4 {
+            margin-bottom: 25px;
+            font-size: 20px;
+            position: relative;
+        }
+        .footer-col h4:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-light);
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.7);
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .footer-col ul li a:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            font-size: 20px;
+        }
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* ===== الأزرار العائمة ===== */
+        .float-buttons {
+            position: fixed;
+            bottom: 120px;
+            left: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .whatsapp-float, .call-float {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            color: white;
+            position: relative;
+        }
+        .whatsapp-float {
+            background: #25D366;
+            animation: pulse 2s infinite;
+        }
+        .call-float {
+            background: var(--primary);
+        }
+        .whatsapp-float:hover, .call-float:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .float-label {
+            position: absolute;
+            left: 75px;
+            background: white;
+            color: var(--text-dark);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            white-space: nowrap;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .whatsapp-float:hover .float-label,
+        .call-float:hover .float-label {
+            opacity: 1;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* ===== استجابة الموبايل المحسنة ===== */
+        @media (max-width: 992px) {
+            .nav-menu, .header-buttons {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .trust-bar {
+                margin-top: 30px;
+            }
+            section {
+                padding: 60px 0;
+            }
+        }
+        @media (max-width: 768px) {
+            .trust-bar {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .home-visit-form {
+                padding: 30px 20px;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+        @media (max-width: 992px) {
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الأزرار العائمة المحسنة -->
+    <div class="float-buttons">
+        <a href="https://wa.me/201285513885" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="float-label">تواصل عبر واتساب</span>
+        </a>
+        <a href="tel:+201285513885" class="call-float">
+            <i class="fas fa-phone"></i>
+            <span class="float-label">اتصل بنا الآن</span>
+        </a>
+    </div>
+
+    <!-- الهيدر المحسن -->
+    <header class="sticky-header">
+        <div class="container header-content">
+            <div class="logo">معامل <span>مؤمن البدراوي</span></div>
+            <nav class="nav-menu">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">عن المعمل</a>
+                <a href="#services">الخدمات</a>
+                <a href="#tests">التحاليل</a>
+                <a href="#branches">الفروع</a>
+                <a href="#home-visit">زيارة منزلية</a>
+                <a href="#contact">اتصل بنا</a>
+            </nav>
+            <div class="header-buttons">
+                <a href="https://wa.me/201285513885" class="btn btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> حجز موعد</a>
+                <a href="tel:+201285513885" class="btn btn-outline"><i class="fas fa-phone"></i> اتصال سريع</a>
+            </div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- شريط العملاء (شركات التأمين) -->
+    <div class="clients-bar">
+        <div class="container">
+            <div class="clients-grid">
+                <div class="client-item"><i class="fas fa-shield-alt"></i> تأمين صحي</div>
+                <div class="client-item"><i class="fas fa-building"></i> شركات كبرى</div>
+                <div class="client-item"><i class="fas fa-hospital"></i> مستشفيات</div>
+                <div class="client-item"><i class="fas fa-clinic-medical"></i> مراكز طبية</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الصفحة الرئيسية (كل الأقسام في صفحة واحدة) -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" style="background: var(--gradient-soft); min-height: 90vh;">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div data-aos="fade-left">
+                    <span class="badge" style="margin-bottom: 20px;"><i class="fas fa-flask"></i> أكثر من 150 نوع تحليل</span>
+                    <h1>تحاليل دقيقة... نتائج سريعة... وثقة من أول زيارة</h1>
+                    <p style="font-size: 18px; color: var(--text-muted); margin: 25px 0;">معامل مؤمن البدراوي - فرعين في الإسكندرية (العصافرة قبلي – السيوف شماعة) مع خدمة الزيارة المنزلية ونتائج معتمدة</p>
+                    
+                    <div class="hero-buttons" style="margin-top: 30px;">
+                        <a href="https://wa.me/201285513885" class="btn btn-primary" target="_blank">احجز موعدك الآن</a>
+                        <a href="#home-visit" class="btn btn-secondary">اطلب زيارة منزلية</a>
+                    </div>
+                </div>
+                <div data-aos="fade-right">
+                    <img src="https://images.pexels.com/photos/8376233/pexels-photo-8376233.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="معمل طبي" style="width: 100%; border-radius: 30px; box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+        </section>
+
+        <!-- شريط الثقة المحسن -->
+        <div class="container">
+            <div class="trust-bar" data-aos="fade-up">
+                <div class="trust-item">
+                    <i class="fas fa-flask"></i>
+                    <h4>أكثر من 150 تحليل</h4>
+                    <p class="text-muted">جميع التحاليل الطبية المتخصصة</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>نتائج في 24 ساعة</h4>
+                    <p class="text-muted">أسرع وقت لإنجاز التحاليل</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-hand-sparkles"></i>
+                    <h4>تعقيم مستمر</h4>
+                    <p class="text-muted">أعلى معايير النظافة</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>فرعين في الإسكندرية</h4>
+                    <p class="text-muted">لخدمة أسرع وأقرب لك</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- إحصائيات -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-aos="zoom-in">
+                        <div class="stat-number">+50,000</div>
+                        <div class="stat-label">تحليل سنوياً</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stat-number">+15</div>
+                        <div class="stat-label">سنة خبرة</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stat-number">+8,500</div>
+                        <div class="stat-label">مريض سنوياً</div>
+                    </div>
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-number">+150</div>
+                        <div class="stat-label">نوع تحليل</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- لماذا نحن؟ -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title-center">تتميز معامل مؤمن البدراوي؟</h2>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;">
+                    <div class="card" data-aos="fade-up">
+                        <i class="fas fa-microscope" style="font-size: 48px; color: var(--primary); margin-bottom: 20px;"></i>
+                        <h3>أحدث الأجهزة</h3>
+                        <p class="text-muted">نستخدم أحدث التقنيات في مجال التحاليل الطبية لضمان دقة النتائج</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-user-md" style="font-size: 48px; color: var(--primary); margin-bottom: 20px;"></i>
+                        <h3>فريق متخصص</h3>
+                        <p class="text-muted">كادر طبي على أعلى مستوى من الخبرة والكفاءة</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-truck-medical" style="font-size: 48px; color: var(--primary); margin-bottom: 20px;"></i>
+                        <h3>زيارة منزلية</h3>
+                        <p class="text-muted">خدمة سحب عينات في المنزل بكل أمان وخصوصية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- صفحة الخدمات والتحاليل الكاملة -->
+        <section id="services" style="background: var(--gradient-soft);">
+            <div class="container">
+                <h2 class="section-title-center">الخدمات والتحاليل الطبية</h2>
+                <p style="text-align: center; font-size: 18px; max-width: 600px; margin: 20px auto;">نقدم أكثر من 150 نوع من التحاليل الطبية بدقة عالية ونتائج سريعة</p>
+                
+                <div class="search-box" style="max-width: 500px; margin: 30px auto;">
+                    <input type="text" placeholder="ابحث عن تحليل..." style="padding: 15px 25px; border: 2px solid var(--border-color); border-radius: 40px; width: 100%;">
+                </div>
+
+                <!-- أقسام التحاليل الكاملة -->
+                <div class="tests-categories" id="testCategories">
+                    <span class="category-tab active" onclick="filterTests('all', this)">الكل</span>
+                    <span class="category-tab" onclick="filterTests('hematology', this)">تحاليل الدم</span>
+                    <span class="category-tab" onclick="filterTests('diabetes', this)">السكر</span>
+                    <span class="category-tab" onclick="filterTests('lipid', this)">دهون الدم</span>
+                    <span class="category-tab" onclick="filterTests('liver', this)">وظائف كبد</span>
+                    <span class="category-tab" onclick="filterTests('kidney', this)">وظائف كلى</span>
+                    <span class="category-tab" onclick="filterTests('thyroid', this)">غدة درقية</span>
+                    <span class="category-tab" onclick="filterTests('hormones', this)">هرمونات</span>
+                    <span class="category-tab" onclick="filterTests('vitamins', this)">فيتامينات</span>
+                    <span class="category-tab" onclick="filterTests('cardiac', this)">قلب</span>
+                    <span class="category-tab" onclick="filterTests('immunology', this)">مناعة</span>
+                    <span class="category-tab" onclick="filterTests('allergy', this)">حساسية</span>
+                    <span class="category-tab" onclick="filterTests('infectious', this)">فيروسات</span>
+                    <span class="category-tab" onclick="filterTests('pregnancy', this)">حمل</span>
+                    <span class="category-tab" onclick="filterTests('tumor', this)">أورام</span>
+                    <span class="category-tab" onclick="filterTests('urine', this)">بول</span>
+                    <span class="category-tab" onclick="filterTests('stool', this)">براز</span>
+                    <span class="category-tab" onclick="filterTests('culture', this)">مزارع</span>
+                </div>
+
+                <!-- قائمة التحاليل الكاملة -->
+                <div class="tests-grid" id="testsGrid">
+                    <!-- 1) تحاليل الدم العامة -->
+                    <div class="test-card" data-category="hematology">
+                        <div class="test-icon"><i class="fas fa-droplet"></i></div>
+                        <div class="test-info">
+                            <h4>صورة دم كاملة CBC</h4>
+                            <p>التحليل الأساسي لتقييم خلايا الدم</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hematology">
+                        <div class="test-icon"><i class="fas fa-microscope"></i></div>
+                        <div class="test-info">
+                            <h4>فيلم دم طرفي Peripheral smear</h4>
+                            <p>فحص مجهري لخلايا الدم</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hematology">
+                        <div class="test-icon"><i class="fas fa-clock"></i></div>
+                        <div class="test-info">
+                            <h4>سرعة الترسيب ESR</h4>
+                            <p>معدل ترسيب كريات الدم الحمراء</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hematology">
+                        <div class="test-icon"><i class="fas fa-dna"></i></div>
+                        <div class="test-info">
+                            <h4>CRP (بروتين سي التفاعلي)</h4>
+                            <p>مؤشر الالتهابات بالجسم</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hematology">
+                        <div class="test-icon"><i class="fas fa-tint"></i></div>
+                        <div class="test-info">
+                            <h4>فصيلة الدم وعامل RH</h4>
+                            <p>تحديد فصيلة الدم ABO & Rh</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hematology">
+                        <div class="test-icon"><i class="fas fa-clock"></i></div>
+                        <div class="test-info">
+                            <h4>PT / INR</h4>
+                            <p>زمن البروثرومبين</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hematology">
+                        <div class="test-icon"><i class="fas fa-clock"></i></div>
+                        <div class="test-info">
+                            <h4>aPTT</h4>
+                            <p>زمن الثرومبوبلاستين الجزئي</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hematology">
+                        <div class="test-icon"><i class="fas fa-tint"></i></div>
+                        <div class="test-info">
+                            <h4>D-Dimer</h4>
+                            <p>اختبار تجلط الدم</p>
+                        </div>
+                    </div>
+
+                    <!-- 2) السكر -->
+                    <div class="test-card" data-category="diabetes">
+                        <div class="test-icon"><i class="fas fa-sugar"></i></div>
+                        <div class="test-info">
+                            <h4>سكر صائم FBS</h4>
+                            <p>نسبة السكر بعد الصيام</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="diabetes">
+                        <div class="test-icon"><i class="fas fa-sugar"></i></div>
+                        <div class="test-info">
+                            <h4>سكر فاطر PP / RBS</h4>
+                            <p>نسبة السكر بعد الأكل</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="diabetes">
+                        <div class="test-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="test-info">
+                            <h4>السكر التراكمي HbA1c</h4>
+                            <p>معدل السكر خلال 3 شهور</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="diabetes">
+                        <div class="test-icon"><i class="fas fa-syringe"></i></div>
+                        <div class="test-info">
+                            <h4>أنسولين صائم Fasting insulin</h4>
+                            <p>نسبة الأنسولين في الدم</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="diabetes">
+                        <div class="test-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="test-info">
+                            <h4>مقاومة الإنسولين HOMA-IR</h4>
+                            <p>حساب مقاومة الأنسولين</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="diabetes">
+                        <div class="test-icon"><i class="fas fa-flask"></i></div>
+                        <div class="test-info">
+                            <h4>اختبار تحمل الجلوكوز OGTT</h4>
+                            <p>منحنى السكر (75g)</p>
+                        </div>
+                    </div>
+
+                    <!-- 3) دهون الدم -->
+                    <div class="test-card" data-category="lipid">
+                        <div class="test-icon"><i class="fas fa-heart"></i></div>
+                        <div class="test-info">
+                            <h4>كوليسترول كلي Total Cholesterol</h4>
+                            <p>نسبة الكوليسترول الكلي</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="lipid">
+                        <div class="test-icon"><i class="fas fa-heart"></i></div>
+                        <div class="test-info">
+                            <h4>ثلاثي الجلسريد Triglycerides</h4>
+                            <p>نسبة الدهون الثلاثية</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="lipid">
+                        <div class="test-icon"><i class="fas fa-heart"></i></div>
+                        <div class="test-info">
+                            <h4>كوليسترول نافع HDL</h4>
+                            <p>البروتين الدهني عالي الكثافة</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="lipid">
+                        <div class="test-icon"><i class="fas fa-heart"></i></div>
+                        <div class="test-info">
+                            <h4>كوليسترول ضار LDL</h4>
+                            <p>البروتين الدهني منخفض الكثافة</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="lipid">
+                        <div class="test-icon"><i class="fas fa-heart"></i></div>
+                        <div class="test-info">
+                            <h4>VLDL</h4>
+                            <p>البروتين الدهني منخفض الكثافة جداً</p>
+                        </div>
+                    </div>
+
+                    <!-- 4) وظائف كبد -->
+                    <div class="test-card" data-category="liver">
+                        <div class="test-icon"><i class="fas fa-liver"></i></div>
+                        <div class="test-info">
+                            <h4>ALT (SGPT)</h4>
+                            <p>إنزيم الكبد - ناقلة أمين الألانين</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="liver">
+                        <div class="test-icon"><i class="fas fa-liver"></i></div>
+                        <div class="test-info">
+                            <h4>AST (SGOT)</h4>
+                            <p>إنزيم الكبد - ناقلة أمين الأسبارتات</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="liver">
+                        <div class="test-icon"><i class="fas fa-liver"></i></div>
+                        <div class="test-info">
+                            <h4>ALP</h4>
+                            <p>الفسفاتاز القلوي</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="liver">
+                        <div class="test-icon"><i class="fas fa-liver"></i></div>
+                        <div class="test-info">
+                            <h4>GGT</h4>
+                            <p>جاما جلوتاميل ترانسفيراز</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="liver">
+                        <div class="test-icon"><i class="fas fa-tint"></i></div>
+                        <div class="test-info">
+                            <h4>بيليروبين كلي/مباشر</h4>
+                            <p>Total/Direct Bilirubin</p>
+                        </div>
+                    </div>
+
+                    <!-- 5) وظائف كلى -->
+                    <div class="test-card" data-category="kidney">
+                        <div class="test-icon"><i class="fas fa-kidney"></i></div>
+                        <div class="test-info">
+                            <h4>كرياتينين Creatinine</h4>
+                            <p>وظائف الكلى</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="kidney">
+                        <div class="test-icon"><i class="fas fa-kidney"></i></div>
+                        <div class="test-info">
+                            <h4>يوريا Urea</h4>
+                            <p>نسبة اليوريا في الدم</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="kidney">
+                        <div class="test-icon"><i class="fas fa-kidney"></i></div>
+                        <div class="test-info">
+                            <h4>حمض اليوريك Uric Acid</h4>
+                            <p>النقرس</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="kidney">
+                        <div class="test-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="test-info">
+                            <h4>eGFR</h4>
+                            <p>معدل الترشيح الكبيبي</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="kidney">
+                        <div class="test-icon"><i class="fas fa-flask"></i></div>
+                        <div class="test-info">
+                            <h4>صوديوم/بوتاسيوم Na/K</h4>
+                            <p>الأملاح والمعادن</p>
+                        </div>
+                    </div>
+
+                    <!-- 6) غدة درقية -->
+                    <div class="test-card" data-category="thyroid">
+                        <div class="test-icon"><i class="fas fa-shield"></i></div>
+                        <div class="test-info">
+                            <h4>TSH</h4>
+                            <p>الهرمون المنشط للغدة الدرقية</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="thyroid">
+                        <div class="test-icon"><i class="fas fa-shield"></i></div>
+                        <div class="test-info">
+                            <h4>Free T4</h4>
+                            <p>هرمون الغدة الدرقية الحر</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="thyroid">
+                        <div class="test-icon"><i class="fas fa-shield"></i></div>
+                        <div class="test-info">
+                            <h4>Free T3</h4>
+                            <p>هرمون الغدة الدرقية الحر</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="thyroid">
+                        <div class="test-icon"><i class="fas fa-shield"></i></div>
+                        <div class="test-info">
+                            <h4>Anti-TPO</h4>
+                            <p>أجسام مضادة للغدة</p>
+                        </div>
+                    </div>
+
+                    <!-- 7) هرمونات -->
+                    <div class="test-card" data-category="hormones">
+                        <div class="test-icon"><i class="fas fa-venus"></i></div>
+                        <div class="test-info">
+                            <h4>FSH / LH</h4>
+                            <p>هرمونات الخصوبة</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hormones">
+                        <div class="test-icon"><i class="fas fa-venus"></i></div>
+                        <div class="test-info">
+                            <h4>Prolactin</h4>
+                            <p>هرمون الحليب</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hormones">
+                        <div class="test-icon"><i class="fas fa-venus"></i></div>
+                        <div class="test-info">
+                            <h4>Estradiol (E2)</h4>
+                            <p>هرمون الاستروجين</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hormones">
+                        <div class="test-icon"><i class="fas fa-venus"></i></div>
+                        <div class="test-info">
+                            <h4>Progesterone</h4>
+                            <p>هرمون البروجسترون</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="hormones">
+                        <div class="test-icon"><i class="fas fa-mars"></i></div>
+                        <div class="test-info">
+                            <h4>Testosterone</h4>
+                            <p>هرمون التستوستيرون</p>
+                        </div>
+                    </div>
+
+                    <!-- 8) فيتامينات -->
+                    <div class="test-card" data-category="vitamins">
+                        <div class="test-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="test-info">
+                            <h4>فيتامين د 25-OH</h4>
+                            <p>Vitamin D</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="vitamins">
+                        <div class="test-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="test-info">
+                            <h4>فيتامين ب12</h4>
+                            <p>Vitamin B12</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="vitamins">
+                        <div class="test-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="test-info">
+                            <h4>حمض الفوليك Folate</h4>
+                            <p>فيتامين B9</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="vitamins">
+                        <div class="test-icon"><i class="fas fa-flask"></i></div>
+                        <div class="test-info">
+                            <h4>الحديد Serum Iron</h4>
+                            <p>نسبة الحديد في الدم</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="vitamins">
+                        <div class="test-icon"><i class="fas fa-flask"></i></div>
+                        <div class="test-info">
+                            <h4>مخزون الحديد Ferritin</h4>
+                            <p>مخزون الحديد في الجسم</p>
+                        </div>
+                    </div>
+
+                    <!-- 9) قلب -->
+                    <div class="test-card" data-category="cardiac">
+                        <div class="test-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="test-info">
+                            <h4>Troponin I/T</h4>
+                            <p>إنزيمات القلب - جلطات</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="cardiac">
+                        <div class="test-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="test-info">
+                            <h4>CK-MB</h4>
+                            <p>إنزيمات القلب</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="cardiac">
+                        <div class="test-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="test-info">
+                            <h4>LDH</h4>
+                            <p>إنزيم نازع هيدروجين اللاكتات</p>
+                        </div>
+                    </div>
+
+                    <!-- 10) مناعة -->
+                    <div class="test-card" data-category="immunology">
+                        <div class="test-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="test-info">
+                            <h4>ANA</h4>
+                            <p>الأجسام المضادة للنواة</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="immunology">
+                        <div class="test-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="test-info">
+                            <h4>RF</h4>
+                            <p>العامل الروماتويدي</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="immunology">
+                        <div class="test-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="test-info">
+                            <h4>Anti-CCP</h4>
+                            <p>الروماتويد المفصلي</p>
+                        </div>
+                    </div>
+
+                    <!-- 11) حساسية -->
+                    <div class="test-card" data-category="allergy">
+                        <div class="test-icon"><i class="fas fa-allergies"></i></div>
+                        <div class="test-info">
+                            <h4>Total IgE</h4>
+                            <p>مؤشر الحساسية الكلي</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="allergy">
+                        <div class="test-icon"><i class="fas fa-allergies"></i></div>
+                        <div class="test-info">
+                            <h4>Specific IgE</h4>
+                            <p>حساسية الأطعمة والتنفسية</p>
+                        </div>
+                    </div>
+
+                    <!-- 12) فيروسات -->
+                    <div class="test-card" data-category="infectious">
+                        <div class="test-icon"><i class="fas fa-virus"></i></div>
+                        <div class="test-info">
+                            <h4>HBsAg</h4>
+                            <p>فيروس B - سطحي</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="infectious">
+                        <div class="test-icon"><i class="fas fa-virus"></i></div>
+                        <div class="test-info">
+                            <h4>HCV Ab</h4>
+                            <p>فيروس C - أجسام مضادة</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="infectious">
+                        <div class="test-icon"><i class="fas fa-virus"></i></div>
+                        <div class="test-info">
+                            <h4>HIV Ag/Ab</h4>
+                            <p>فيروس نقص المناعة</p>
+                        </div>
+                    </div>
+
+                    <!-- 13) حمل -->
+                    <div class="test-card" data-category="pregnancy">
+                        <div class="test-icon"><i class="fas fa-baby"></i></div>
+                        <div class="test-info">
+                            <h4>β-hCG</h4>
+                            <p>اختبار الحمل (دم)</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="pregnancy">
+                        <div class="test-icon"><i class="fas fa-baby"></i></div>
+                        <div class="test-info">
+                            <h4>TORCH</h4>
+                            <p>عدوى الحمل IgG/IgM</p>
+                        </div>
+                    </div>
+
+                    <!-- 14) أورام -->
+                    <div class="test-card" data-category="tumor">
+                        <div class="test-icon"><i class="fas fa-dna"></i></div>
+                        <div class="test-info">
+                            <h4>AFP</h4>
+                            <p>ألفا فيتو بروتين</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="tumor">
+                        <div class="test-icon"><i class="fas fa-dna"></i></div>
+                        <div class="test-info">
+                            <h4>CEA</h4>
+                            <p>مستضد سرطاني</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="tumor">
+                        <div class="test-icon"><i class="fas fa-dna"></i></div>
+                        <div class="test-info">
+                            <h4>PSA Total/Free</h4>
+                            <p>البروستاتا</p>
+                        </div>
+                    </div>
+
+                    <!-- 15) بول -->
+                    <div class="test-card" data-category="urine">
+                        <div class="test-icon"><i class="fas fa-toilet"></i></div>
+                        <div class="test-info">
+                            <h4>تحليل بول كامل</h4>
+                            <p>Urinalysis</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="urine">
+                        <div class="test-icon"><i class="fas fa-toilet"></i></div>
+                        <div class="test-info">
+                            <h4>مزرعة بول</h4>
+                            <p>Urine culture & sensitivity</p>
+                        </div>
+                    </div>
+
+                    <!-- 16) براز -->
+                    <div class="test-card" data-category="stool">
+                        <div class="test-icon"><i class="fas fa-poop"></i></div>
+                        <div class="test-info">
+                            <h4>تحليل براز كامل</h4>
+                            <p>Stool analysis</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="stool">
+                        <div class="test-icon"><i class="fas fa-poop"></i></div>
+                        <div class="test-info">
+                            <h4>جرثومة المعدة H. pylori</h4>
+                            <p>في البراز</p>
+                        </div>
+                    </div>
+
+                    <!-- 17) مزارع -->
+                    <div class="test-card" data-category="culture">
+                        <div class="test-icon"><i class="fas fa-microscope"></i></div>
+                        <div class="test-info">
+                            <h4>مزرعة دم</h4>
+                            <p>Blood culture</p>
+                        </div>
+                    </div>
+                    <div class="test-card" data-category="culture">
+                        <div class="test-icon"><i class="fas fa-microscope"></i></div>
+                        <div class="test-info">
+                            <h4>مزرعة حلق</h4>
+                            <p>Throat culture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الفريق الطبي -->
+        <section id="team">
+            <div class="container">
+                <h2 class="section-title-center">فريقنا الطبي</h2>
+                <div class="team-grid">
+                    <div class="card team-card" data-aos="fade-up">
+                        <div class="team-avatar"><i class="fas fa-user-md"></i></div>
+                        <h4>د. مؤمن البدراوي</h4>
+                        <p class="text-muted">استشاري التحاليل الطبية</p>
+                    </div>
+                    <div class="card team-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-avatar"><i class="fas fa-user-nurse"></i></div>
+                        <h4>د. أحمد سعيد</h4>
+                        <p class="text-muted">أخصائي الميكروبيولوجي</p>
+                    </div>
+                    <div class="card team-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-avatar"><i class="fas fa-user-nurse"></i></div>
+                        <h4>د. منى محمود</h4>
+                        <p class="text-muted">أخصائية الكيمياء السريرية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الفروع -->
+        <section id="branches">
+            <div class="container">
+                <h2 class="section-title-center">فروعنا</h2>
+                <div class="branches-grid">
+                    <!-- فرع العصافرة -->
+                    <div class="branch-card" data-aos="zoom-in">
+                        <div class="branch-img">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="branch-badge">الفرع الرئيسي</span>
+                        </div>
+                        <div class="branch-info">
+                            <h3>العصافرة قبلي</h3>
+                            <div class="branch-details">
+                                <p><i class="fas fa-location-dot" style="color: var(--primary);"></i> ناصية شارع المعهد الديني</p>
+                                <p><i class="fas fa-clock" style="color: var(--primary);"></i> يومياً 8 صباحاً - 9 مساءً</p>
+                                <p><i class="fas fa-phone" style="color: var(--primary);"></i> 01285513885</p>
+                            </div>
+                            <div class="branch-buttons" style="display: flex; gap: 10px;">
+                                <a href="tel:+201285513885" class="btn btn-outline" style="flex: 1;"><i class="fas fa-phone"></i> اتصال</a>
+                                <a href="https://wa.me/201285513885" class="btn btn-outline" style="flex: 1;" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=العصافرة+قبلي+الاسكندرية" class="btn btn-primary" style="flex: 1;" target="_blank"><i class="fas fa-map"></i> خرائط</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- فرع السيوف -->
+                    <div class="branch-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="branch-img">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="branch-badge">فرع السيوف</span>
+                        </div>
+                        <div class="branch-info">
+                            <h3>السيوف شماعة</h3>
+                            <div class="branch-details">
+                                <p><i class="fas fa-location-dot" style="color: var(--primary);"></i> عمارات النصر أمام مدرسة منهل المعرفة</p>
+                                <p><i class="fas fa-clock" style="color: var(--primary);"></i> يومياً 8 صباحاً - 9 مساءً</p>
+                                <p><i class="fas fa-phone" style="color: var(--primary);"></i> 01285513885</p>
+                            </div>
+                            <div class="branch-buttons" style="display: flex; gap: 10px;">
+                                <a href="tel:+201285513885" class="btn btn-outline" style="flex: 1;"><i class="fas fa-phone"></i> اتصال</a>
+                                <a href="https://wa.me/201285513885" class="btn btn-outline" style="flex: 1;" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=السيوف+شماعة+الاسكندرية" class="btn btn-primary" style="flex: 1;" target="_blank"><i class="fas fa-map"></i> خرائط</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الزيارة المنزلية -->
+        <section id="home-visit" style="background: var(--gradient-soft);">
+            <div class="container">
+                <h2 class="section-title-center">خدمة الزيارة المنزلية</h2>
+                <div class="home-visit-form">
+                    <h3 style="margin-bottom: 30px; text-align: center;">اطلب زيارة منزلية الآن</h3>
+                    <form id="homeVisitForm" onsubmit="submitHomeVisit(event)">
+                        <div class="form-group">
+                            <input type="text" placeholder="الاسم الثلاثي" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="رقم الهاتف" value="+20" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">اختر المنطقة</option>
+                                <option>العصافرة</option>
+                                <option>السيوف</option>
+                                <option>سيدي بشر</option>
+                                <option>المنتزه</option>
+                                <option>محرم بك</option>
+                                <option>سموحة</option>
+                                <option>محطة الرمل</option>
+                                <option>أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" placeholder="العنوان بالتفصيل (شارع - مبنى - شقة)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" placeholder="الوقت المفضل">
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="3" placeholder="نوع التحليل المطلوب (اختياري)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px;">إرسال الطلب</button>
+                    </form>
+                    <p style="margin-top: 20px; color: var(--text-muted); text-align: center;">سيتم التواصل خلال 30 دقيقة لتأكيد الموعد</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- الأسئلة الشائعة -->
+        <section id="faq">
+            <div class="container" style="max-width: 800px;">
+                <h2 class="section-title-center">الأسئلة الشائعة</h2>
+                <details class="card" style="margin-bottom: 15px;">
+                    <summary style="font-weight: 700; cursor: pointer; font-size: 18px;">هل متاح زيارات منزلية؟</summary>
+                    <p class="text-muted" style="margin-top: 20px;">نعم، متاح زيارة منزلية في جميع مناطق الإسكندرية. يمكنك طلب الزيارة من خلال صفحة الزيارة المنزلية أو عبر الواتساب على الرقم 01285513885.</p>
+                </details>
+                <details class="card" style="margin-bottom: 15px;">
+                    <summary style="font-weight: 700; cursor: pointer; font-size: 18px;">كم مدة ظهور النتائج؟</summary>
+                    <p class="text-muted" style="margin-top: 20px;">معظم التحاليل تظهر خلال 24 ساعة كحد أقصى. بعض التحاليل الخاصة قد تستغرق وقت أطول حسب نوع التحليل.</p>
+                </details>
+                <details class="card" style="margin-bottom: 15px;">
+                    <summary style="font-weight: 700; cursor: pointer; font-size: 18px;">هل يلزم الصيام قبل التحاليل؟</summary>
+                    <p class="text-muted" style="margin-top: 20px;">بعض التحاليل مثل السكر الصائم والدهون تحتاج صيام 8-10 ساعات. يمكنك التواصل معنا لتأكيد التعليمات الخاصة بكل تحليل.</p>
+                </details>
+                <details class="card" style="margin-bottom: 15px;">
+                    <summary style="font-weight: 700; cursor: pointer; font-size: 18px;">كيف أستلم النتائج؟</summary>
+                    <p class="text-muted" style="margin-top: 20px;">يمكنك استلام النتائج بشكل ورقي من الفرع، أو عبر الواتساب بصيغة PDF، أو عبر البريد الإلكتروني حسب رغبتك.</p>
+                </details>
+                <details class="card" style="margin-bottom: 15px;">
+                    <summary style="font-weight: 700; cursor: pointer; font-size: 18px;">هل تقبلون التأمين الصحي؟</summary>
+                    <p class="text-muted" style="margin-top: 20px;">نعم، لدينا تعاقدات مع العديد من شركات التأمين الصحي. يرجى التواصل معنا للاستفسار عن شركة التأمين الخاصة بك.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- اتصل بنا -->
+        <section id="contact" style="background: var(--gradient-soft);">
+            <div class="container">
+                <h2 class="section-title-center">اتصل بنا</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+                    <div>
+                        <div class="card" style="padding: 40px;">
+                            <h3>بيانات التواصل</h3>
+                            <div style="margin-top: 30px;">
+                                <p style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;"><i class="fas fa-phone" style="color: var(--primary); font-size: 24px; width: 30px;"></i> <a href="tel:+201285513885" style="font-size: 20px;">01285513885</a></p>
+                                <p style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;"><i class="fab fa-whatsapp" style="color: #25D366; font-size: 24px; width: 30px;"></i> <a href="https://wa.me/201285513885" target="_blank" style="font-size: 20px;">واتساب</a></p>
+                                <p style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;"><i class="fab fa-facebook" style="color: #1877f2; font-size: 24px; width: 30px;"></i> <a href="https://www.facebook.com/dr.moamenlab" target="_blank" style="font-size: 20px;">فيسبوك</a></p>
+                                <p style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;"><i class="fas fa-map-marker-alt" style="color: var(--primary); font-size: 24px; width: 30px;"></i> <span style="font-size: 18px;">العصافرة قبلي + السيوف شماعة</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card" style="padding: 40px;">
+                            <h3>أرسل رسالة</h3>
+                            <form onsubmit="submitContact(event)" style="margin-top: 20px;">
+                                <div class="form-group">
+                                    <input type="text" placeholder="الاسم" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" placeholder="رقم الهاتف" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea rows="5" placeholder="رسالتك..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">إرسال</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر المحسن -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>معامل مؤمن البدراوي</h4>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.8;">دقة، سرعة، خصوصية. نخدمكم من فرعين في الإسكندرية بأكثر من 150 نوع تحليل ونتائج معتمدة.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/dr.moamenlab" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/201285513885" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">عن المعمل</a></li>
+                        <li><a href="#services">الخدمات والتحاليل</a></li>
+                        <li><a href="#home-visit">زيارة منزلية</a></li>
+                        <li><a href="#branches">الفروع</a></li>
+                        <li><a href="#faq">الأسئلة الشائعة</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>الفروع</h4>
+                    <ul>
+                        <li><strong>العصافرة قبلي:</strong> ناصية شارع المعهد الديني</li>
+                        <li><strong>السيوف شماعة:</strong> عمارات النصر أمام مدرسة منهل المعرفة</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>اتصل بنا</h4>
+                    <ul>
+                        <li><i class="fas fa-phone" style="margin-left: 10px;"></i> <a href="tel:+201285513885">01285513885</a></li>
+                        <li><i class="fab fa-whatsapp" style="margin-left: 10px;"></i> <a href="https://wa.me/201285513885" target="_blank">واتساب</a></li>
+                        <li><i class="fas fa-envelope" style="margin-left: 10px;"></i> info@moamenlab.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2026 معامل مؤمن البدراوي | <a href="#" style="color: rgba(255,255,255,0.5);">سياسة الخصوصية</a></p>
+                                                <p>  تصميم وتطوير متخصص لمواقع الخدمات الزراعية بواسطة kodia web design </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript المحسن -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        function filterTests(category, element) {
+            // تحديث التبويب النشط
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            element.classList.add('active');
+            
+            // تصفية التحاليل
+            const tests = document.querySelectorAll('.test-card');
+            tests.forEach(test => {
+                if (category === 'all' || test.dataset.category === category) {
+                    test.style.display = 'flex';
+                } else {
+                    test.style.display = 'none';
+                }
+            });
+        }
+
+        function submitHomeVisit(event) {
+            event.preventDefault();
+            alert('تم استلام طلب الزيارة المنزلية بنجاح. سنتواصل معك خلال 30 دقيقة لتأكيد الموعد.');
+            window.open('https://wa.me/201285513885', '_blank');
+        }
+
+        function submitContact(event) {
+            event.preventDefault();
+            alert('تم إرسال رسالتك. سنرد عليك في أقرب وقت.');
+        }
+
+        function toggleMobileMenu() {
+            alert('القائمة: الرئيسية - عن المعمل - الخدمات - التحاليل - الفروع - زيارة منزلية - اتصل بنا');
+        }
+    </script>
+</body>
+</html>
